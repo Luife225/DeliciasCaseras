@@ -1,10 +1,14 @@
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const modal = document.getElementById('modalLogin');
-    modal.style.display = 'flex'; 
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        console.log('Formulario enviado');
 
-    const cerrarModal = document.getElementById('cerrarModalLogin');
-    cerrarModal.addEventListener('click', function() {
-        modal.style.display = 'none';
+        const modal = document.getElementById('modalLogin');
+        modal.style.display = 'flex';
+
+        const cerrarModal = document.getElementById('cerrarModalLogin');
+        cerrarModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
     });
 });
