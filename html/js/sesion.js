@@ -1,10 +1,14 @@
-document.getElementById('loginForm').addEventListener('submit', function (e) {
+document.querySelector('.loginForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const loginUsuario = document.getElementById('loginUsuario').value;
-    const loginContrasena = document.getElementById('loginContraseña').value;
+    const loginUsuario = document.querySelector('.loginForm input[placeholder="Usuario"]').value.trim();
+    const loginContrasena = document.querySelector('.loginForm input[placeholder="Contraseña"]').value.trim();
 
-    // Recuperar los datos de usuario almacenados en localStorage
+    if (!loginUsuario || !loginContrasena) {
+        alert('Todos los campos son obligatorios.');
+        return;
+    }
+
     const storedData = localStorage.getItem('userData');
     if (!storedData) {
         alert('No hay cuentas registradas. Por favor, crea una cuenta primero.');
@@ -13,24 +17,15 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 
     const userData = JSON.parse(storedData);
 
-    // Verificar si las credenciales ingresadas coinciden
     if (loginUsuario === userData.usuario && loginContrasena === userData.contrasena) {
-        // Marcar al usuario como autenticado
-        localStorage.setItem('isLoggedIn', 'true'); // Usuario autenticado
-
-        // Guardar información adicional (como nombre y apodo)
+        localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('nombreCompleto', userData.nombreCompleto);
         localStorage.setItem('apodo', userData.usuario);
 
-        // Mostrar el modal de inicio de sesión exitoso
-        const modal = document.getElementById('modalLogin');
-        modal.style.display = 'flex';
+        document.querySelector('.modal-login').style.display = 'flex';
 
-        // Cerrar el modal y redirigir a la página principal
-        const cerrarModal = document.getElementById('cerrarModalLogin');
-        cerrarModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-            // Redirigir a la página después del inicio de sesión
+        document.querySelector('.cerrarModalLogin').addEventListener('click', () => {
+            document.querySelector('.modal-login').style.display = 'none';
             window.location.href = 'indexDespues.html';
         });
     } else {
