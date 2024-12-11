@@ -4,11 +4,6 @@ document.querySelector('.loginForm').addEventListener('submit', function (e) {
     const loginUsuario = document.querySelector('.loginForm input[placeholder="Usuario"]').value.trim();
     const loginContrasena = document.querySelector('.loginForm input[placeholder="Contraseña"]').value.trim();
 
-    if (!loginUsuario || !loginContrasena) {
-        alert('Todos los campos son obligatorios.');
-        return;
-    }
-
     const storedData = localStorage.getItem('userData');
     if (!storedData) {
         alert('No hay cuentas registradas. Por favor, crea una cuenta primero.');
@@ -17,16 +12,18 @@ document.querySelector('.loginForm').addEventListener('submit', function (e) {
 
     const userData = JSON.parse(storedData);
 
-    if (loginUsuario === userData.usuario && loginContrasena === userData.contrasena) {
+    if (loginUsuario === userData.nombreUsuario && loginContrasena === userData.contrasena) {
+        // Marcar al usuario como autenticado
         localStorage.setItem('isLoggedIn', 'true');
-        localStorage.setItem('nombreCompleto', userData.nombreCompleto);
-        localStorage.setItem('apodo', userData.usuario);
 
-        document.querySelector('.modal-login').style.display = 'flex';
+        // Mostrar el modal de inicio de sesión exitoso
+        const modal = document.getElementById('modalLogin');
+        modal.style.display = 'flex';
 
-        document.querySelector('.cerrarModalLogin').addEventListener('click', () => {
-            document.querySelector('.modal-login').style.display = 'none';
-            window.location.href = 'indexDespues.html';
+        const cerrarModal = document.getElementById('cerrarModalLogin');
+        cerrarModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            window.location.href = 'indexDespues.html'; // Redirige a la página principal
         });
     } else {
         alert('Usuario o contraseña incorrectos.');
