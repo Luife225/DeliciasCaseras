@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Encabezado.css">
+    <link rel="stylesheet" href="css/sugerencia.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="css/img/icon.png" type="icon/png">
+    <title>Sugerencias</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="Encabezado">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+    
+            <div class="logo">
+                <a href="indexDespues.html">
+                    <img src="css/img/LogoReal.png" alt="Logo" />
+                </a>
+            </div>
+    
+            <h1 class="titulo">Delicias Caseras</h1>
+    
+            <nav id="menu">
+                <a href="Inicio.html"><i class="fas fa-th-list"></i>Categorías</a>
+                <a href="Recetas.html"><i class="fas fa-book-open"></i>Recetas</a>
+                <a href="chefs.html"><i class="fas fa-user"></i>Chefs</a>
+                <a href="sugerencias.html"><i class="fas fa-lightbulb"></i>Sugerencias</a>
+                <a href="atencion.html"><i class="fas fa-headset"></i>Atención</a>
+            </nav>
+        </div>
+    </header>
+    <div class="contenidoSusge">
+        <section class="sugerencias-intro">
+            <h2>¡Queremos conocer tu opinión!</h2>
+            <p>Tu opinión es muy importante para nosotros. Si tienes sugerencias, comentarios o ideas que crees que pueden mejorar nuestra página o las recetas que ofrecemos, no dudes en compartirlas. Nos encanta escuchar a nuestra comunidad y siempre estamos buscando nuevas formas de mejorar y sorprenderte.</p>
+        </section>
+    
+        <div class="contenedores-para-alinear">
+            <section class="formulario-sugerencias">
+                <h3>Comparte tu sugerencia</h3>
+                <p>Cuéntanos qué te gustaría ver en el sitio, qué recetas te gustaría probar o cualquier otra idea que tengas. ¡Estamos aquí para ayudarte a hacer tu experiencia aún mejor!</p>
+            
+                <form action="#" method="post">
+                    <label for="anonymous">¿Deseas enviar tu sugerencia de forma anónima?</label>
+                    <div class="switch">
+                        <input type="checkbox" id="anonymous" name="anonymous">
+                        <label for="anonymous"></label>
+                    </div>
+            
+                    <label for="sugerencia">Tu sugerencia:</label>
+                    <textarea id="sugerencia" name="sugerencia" rows="5" required placeholder="Escribe tu sugerencia o comentario aquí..."></textarea>
+            
+                    <button type="submit">Enviar Sugerencia</button>
+                </form>
+            </section>
+    
+            <section class="ideas-populares">
+                <h3>Ideas Populares de la Comunidad</h3>
+                <div class="idea">
+                    <h4>Recetas veganas</h4>
+                    <p>Muchos de nuestros usuarios han pedido más recetas veganas. ¿Te gustaría ver más opciones? ¡Déjanos saber lo que piensas!</p>
+                </div>
+    
+                <div class="idea">
+                    <h4>Menú para ocasiones especiales</h4>
+                    <p>Algunos usuarios han sugerido un menú dedicado a cenas de Navidad o fiestas familiares. ¿Te gustaría ver una sección dedicada a estas ocasiones? ¡Cuéntanos!</p>
+                </div>
+    
+                <div class="idea">
+                    <h4>Consejos sobre ingredientes sustitutos</h4>
+                    <p>Queremos saber si te gustaría que incluyéramos más información sobre ingredientes sustitutos para aquellos que tienen restricciones alimentarias o buscan alternativas más saludables.</p>
+                </div>
+            </section>
+    
+            <section class="testimonios">
+                <h3>Lo que nuestros usuarios dicen</h3>
+                <p>Gracias a todos los que han compartido sus opiniones y sugerencias. Aquí te mostramos algunos de los comentarios más recientes de nuestra comunidad:</p>
+    
+                <div class="testimonio">
+                    <p><strong>Maria R.</strong>: "Me encanta la idea de tener más recetas sin gluten. Las últimas recetas que publicaron fueron maravillosas. ¡Gracias!"</p>
+                </div>
+    
+                <div class="testimonio">
+                    <p><strong>Juan P.</strong>: "Sería genial ver más recetas de postres saludables. ¡Estoy buscando opciones deliciosas pero que no afecten mi dieta!"</p>
+                </div>
+    
+                <div class="testimonio">
+                    <p><strong>Ana L.</strong>: "Sugiero que haya más recetas de platos tradicionales de diferentes países. ¡Eso me permitiría viajar con la comida!"</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    
+
+
+    <footer>
+        <div class="footerContenido">
+            <div class="footerNosotros">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos un equipo apasionado por la cocina, comprometidos con compartir las mejores recetas de todo el mundo. Nuestra misión es ayudarte a descubrir nuevos sabores, técnicas de cocina y consejos útiles para que puedas sorprender a tus seres queridos en la mesa. Cada receta ha sido cuidadosamente seleccionada y probada para asegurarnos de que obtienes los mejores resultados. Creemos que cocinar es más que preparar comida, es una forma de expresarse y de unir a las personas.</p>
+            </div>
+    
+            <div class="footerRedes">
+                <h3>Síguenos</h3>
+                <div class="social">
+                    <a href="https://facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://pinterest.com" target="_blank" class="fab fa-pinterest-p"></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="registro" id="registroSeccion">
+            <h3 id="mensajeBienvenida">¡Bienvenido Luis Felipe!</h3>
+            <br>
+            <div class="botonesRegistro">
+                <a href="perfil.html">
+                    <button id="btnVerCuenta">
+                        <i class="fas fa-user"></i> Ver Cuenta
+                    </button>
+                </a>
+                <form id="registroForm" action="Registro.html" method="POST">
+                    <button type="submit" id="btnRegistrar">Cambiar Cuenta</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="direccion">
+            <p>&copy; 2024 Mi Sitio de Recetas. Todos los derechos reservados a mi :v </p>
+        </div>
+    </footer>
+    
+    
+    <script src="js/footer.js"></script>
+    <script src="js/ResponsiveEncabezado.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+body {
+    background-image: url(img/sugerencia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenidoSusge {
+    display: flex;
+    flex-direction: column; /* Apilar las secciones verticalmente */
+    gap: 40px; /* Espacio entre las secciones */
+    padding: 20px;
+}
+
+/* Sección de introducción centrada */
+.sugerencias-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* Centrado de los elementos dentro de la sección */
+.sugerencias-intro h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #3a37ee;
+}
+
+.sugerencias-intro p {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #bac435;
+}
+
+/* Contenedor para alinear los 3 contenedores horizontalmente */
+.contenedores-para-alinear {
+    display: flex; /* Apilarlos horizontalmente */
+    gap: 40px; /* Espacio entre los contenedores */
+    justify-content: space-between; /* Ajustar el espacio entre los contenedores */
+    padding: 20px 0; /* Espaciado alrededor */
+}
+
+/* Asegurarse de que los contenedores no sobrepasen el tamaño */
+.formulario-sugerencias, .ideas-populares, .testimonios {
+    flex: 1 1 30%; /* Toman un 30% del espacio cada uno, pero pueden ajustarse */
+    box-sizing: border-box;
+}
+
+/* Formulario de sugerencias */
+.formulario-sugerencias {
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffcc80;
+    border: 2px solid #ff5722;
+    transition: all 0.3s ease;
+    max-width: 700px;
+    flex: 1; /* Ocupa el espacio restante */
+}
+
+.formulario-sugerencias:hover {
+    background-color: #ffb74d;
+}
+
+.formulario-sugerencias h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.formulario-sugerencias label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Estilo para el interruptor */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.switch label:before {
+    content: "";
+    position: absolute;
+    
+    left: 4px;
+    bottom: 4px;
+    top: -1px;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.switch input:checked + label {
+    background-color: #4CAF50;
+}
+
+.switch input:checked + label:before {
+    transform: translateX(26px);
+}
+
+.formulario-sugerencias input,
+.formulario-sugerencias textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.formulario-sugerencias input:focus,
+.formulario-sugerencias textarea:focus {
+    border: 1px solid #ff5722;
+}
+
+.formulario-sugerencias button {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-sugerencias button:hover {
+    background-color: #e64a19;
+}
+
+/* Ideas populares y testimonios - Alineados junto al formulario */
+.ideas-populares,
+.testimonios {
+    margin-top: 20px;
+    background-color: #ffeb3b;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Reducir el tamaño */
+    flex: 1; /* Las secciones ocuparán el mismo espacio */
+}
+
+/* Encabezados de ideas populares y testimonios */
+.ideas-populares h3,
+.testimonios h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Contenidos de las ideas populares y testimonios */
+.ideas-populares .idea,
+.testimonios .testimonio {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.ideas-populares .idea:hover,
+.testimonios .testimonio:hover {
+    background-color: #ffe0b2;
+}
+
+.ideas-populares .idea h4,
+.testimonios .testimonio p {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenidoSusge {
+        flex-direction: column; /* Apilar las secciones */
+        gap: 20px;
+    }
+
+    .contenedores-para-alinear {
+        flex-direction: column; /* Apilarlos verticalmente en pantallas pequeñas */
+    }
+
+    .formulario-sugerencias, .ideas-populares, .testimonios {
+        flex: 1 1 100%; /* Tomarán el 100% del espacio disponible */
+        max-width: none; /* Eliminar el límite de ancho */
+    }
+
+    .formulario-sugerencias button {
+        font-size: 16px;
+    }
+}

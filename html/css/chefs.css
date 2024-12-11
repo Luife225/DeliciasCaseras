@@ -1,0 +1,190 @@
+/* Para la sección de chefs */
+html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("img/chef/chefbodyreal.png");
+}
+
+
+/* Contenedor principal de la galería de chefs */
+.chefs-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+/* Tarjetas de cada chef */
+.chef-card {
+    width: 280px;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #bdb779;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.chef-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Efecto de hover en la tarjeta */
+.chef-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.chef-card:hover img {
+    opacity: 0.9;
+}
+
+/* Información del chef */
+.chef-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.chef-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.chef-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Efecto en los textos al pasar el mouse */
+.chef-card:hover .chef-info .chef-name {
+    color: #ff5722;
+}
+
+.chef-card:hover .chef-info .chef-description {
+    color: #333;
+}
+
+/* Media Queries para hacer la galería responsiva */
+@media (max-width: 500px) {
+    .chefs-gallery {
+        justify-content: center;
+    }
+
+    .chef-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .chef-name {
+        font-size: 20px;
+    }
+
+    .chef-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 300px) {
+    .chefs-gallery {
+        justify-content: center;
+    }
+
+    .chef-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+.chef-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chef-info {
+    background-color: #bdb779;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chef-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.chef-name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.chef-info p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.chef-info p strong {
+    color: #333;
+}
+
+/* Estilos de responsividad */
+@media (max-width: 768px) {
+    .chef-info-section {
+        padding: 20px;
+    }
+
+    .chef-info {
+        padding: 15px;
+    }
+
+    .chef-name {
+        font-size: 22px;
+    }
+
+    .chef-info p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chef-info-section {
+        padding: 10px;
+    }
+
+    .chef-info {
+        padding: 10px;
+    }
+
+    .chef-name {
+        font-size: 20px;
+    }
+
+    .chef-info p {
+        font-size: 12px;
+    }
+}

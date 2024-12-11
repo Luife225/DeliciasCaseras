@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/Sesion.css">
+    <link rel="icon" href="css/img/icon.png" type="icon/png">
+</head>
+<body>
+    <div class="registro-circulo">
+        <div class="contenido-registro">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUsuario" placeholder="Usuario" required>
+                <input type="password" id="loginContraseña" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <p class="crear-cuenta">¿No tienes cuenta? <a href="Registro.html">Crear Cuenta</a></p>
+        </div>
+    </div>
+
+<div id="modalLogin" class="modal">
+    <div class="modal-contenido">
+        <h3>Inicio de sesión exitoso</h3>
+        <button id="cerrarModalLogin">Cerrar</button>
+    </div>
+</div>
+
+
+    <script src="js/sesion.js"></script>
+    <script src="js/imagenesSsesion.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url("img/recetas.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 50px;
+}
+
+.filtros-container {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 800px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    margin: 10px 0 0 0;
+}
+
+.filtros {
+    margin-bottom: 30px;
+}
+
+.filtros h3 {
+    font-size: 1.2em;
+    color: #8db640;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e65310;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.filtro-opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 223px;
+    margin-top: 10px;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.opcion:hover {
+    background-color: #e6f2ff;
+    transform: scale(1.02);
+}
+
+.opcion span {
+    font-size: 1em;
+    color: #555;
+}
+
+.filtro-categoria {
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.filtro-categoria.active {
+    background-color: #007bff;
+    transform: scale(1.1);
+}
+
+.filtro-categoria:hover {
+    background-color: #0056b3;
+}
+
+.carta-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1024px;
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.carta {
+    width: 234px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.carta:hover {
+    transform: translateY(-5px);
+}
+
+.carta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.texto {
+    padding: 10px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filtros-container {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        height: 500px;
+    }
+
+    .filtros {
+        width: calc(50% - 10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .carta-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .carta {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .carta img {
+        width: 100%;
+        height: 200px; /* Ajusta la altura según necesites */
+        object-fit: cover; /* Asegura que las imágenes mantengan proporción */
+    }
+}
+@media (max-width: 652px) {
+    .filtros-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 300px;
+    }
+
+    .filtros {
+        width: 100%; /* Cada fila de filtros ocupa el 100% del contenedor */
+        margin-bottom: 20px; /* Espaciado entre las filas */
+    }
+
+    .filtro-opciones {
+        flex-direction: column; /* Las opciones dentro de cada filtro también en columna */
+        width: 100%;
+    }
+
+    .opcion {
+        width: 100%; /* Cada opción se ajusta al ancho disponible */
+    }
+}
+

@@ -1,0 +1,406 @@
+/* Fondo animado del body */
+body {
+    margin: 0;
+    padding: 0;
+    animation: slideBackground 9s infinite; 
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+    overflow: visible;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Asegura que el body tenga al menos el alto de la pantalla */
+}
+
+@keyframes slideBackground {
+    0% { background-image: url('img/carrusel/uno.png'); }
+    25% { background-image: url('img/carrusel/dos.png'); }
+    50% { background-image: url('img/carrusel/tres.png'); }
+    75% { background-image: url('img/carrusel/cuatro.png'); }
+    100% { background-image: url('img/carrusel/cinco.png'); }
+}
+
+/* Estilos generales */
+.cuerpo {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.introContenido {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.intro {
+    font-size: 30px;
+    flex: 1;
+    text-align: left;
+    padding-left: 50px;
+    margin-right: 20px;
+}
+
+.intro h1 {
+    color: #e67e22;
+}
+
+.intro p {
+    font-size: 20px;
+    color: #dbdad8;
+}
+
+.Buscar {
+    flex: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.Buscar input {
+    padding: 10px;
+    font-size: 20px;
+    width: 60%;
+}
+
+.Buscar button {
+    padding: 15px 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #2b1c63;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.Buscar button:hover {
+    background-color: #219150;
+}
+
+/* RecetasDestacadas */
+.RecetasDestacadas {
+    margin-bottom: 40px;
+}
+
+.RecetasDestacadas h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #86eb35;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    background-color: #b6b456;
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+.slide-content img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    width: 50%;
+    color: #333;
+    font-size: 18px;
+}
+
+.text h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #960202;
+}
+
+.text p {
+    margin: 10px 0 0;
+    line-height: 1.5;
+    font-size: 24px;
+}
+
+.text ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.text ul li {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #555;
+}
+
+
+.chefs {
+    display: flex; /* Disposición en fila de las cartas */
+    flex-direction: column; /* Apila las cartas una debajo de la otra */
+    gap: 20px; /* Espacio entre las cartas */
+    justify-content: flex-start; /* Alinea las cartas al inicio (lado izquierdo) */
+    align-items: flex-start; /* Alinea las cartas al lado izquierdo */
+    padding: 20px; /* Espaciado alrededor de las cartas */
+}
+
+.chefcarta {
+    background-color: #34495e; /* Fondo gris oscuro */
+    border-radius: 15px; /* Bordes redondeados */
+    display: flex;
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    height: 300px; /* Ajusta la altura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    overflow: hidden; /* Asegura que la imagen se recorte bien */
+    margin: 10px 0; /* Espaciado entre cada carta */
+    flex-direction: row; /* Por defecto, la imagen está a la izquierda y el texto a la derecha */
+}
+
+.chefImagen {
+    width: 40%; /* La imagen ocupa un 40% del contenedor */
+    height: 100%; /* La imagen ocupa todo el alto de la carta */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+    border-radius: 15px 0 0 15px; /* Bordes redondeados en el lado izquierdo */
+}
+
+.chefinfo {
+    padding: 15px;
+    color: #fff; /* Texto blanco */
+    width: 60%; /* El texto ocupa el 60% del contenedor */
+    display: flex;
+    flex-direction: column; /* Organiza el texto verticalmente */
+    justify-content: center; /* Centra el contenido dentro del contenedor */
+}
+
+.chefinfo h3 {
+    font-size: 1.7em; /* Tamaño de fuente para el título */
+    margin: 0;
+    color: #db7924;
+}
+
+.chefinfo p {
+    font-size: 1.4em; /* Tamaño de fuente para la descripción */
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.Informacion p {
+    text-align: center; /* Centra el texto */
+    color: #86eb35; /* Color verde oscuro */
+    font-size: 3em; /* Tamaño de texto 3em */
+    margin: 20px 0; /* Agrega márgenes alrededor del texto */
+}
+
+/* Estilo para el título "Chefs más famosos" */
+.profesionales h2 {
+    text-align: center; /* Centra el texto */
+    color: #3ee646; /* Color verde oscuro */
+    font-size: 4em; /* Tamaño de texto 4em */
+    margin: 40px 0 20px 0; /* Márgenes alrededor del texto */
+}
+
+@media screen and (max-width: 546px) {
+    .chefcarta {
+        display: flex; /* Usamos flex para controlar el layout */
+        flex-direction: column; /* Cambiar la disposición a columna (imagen arriba, título abajo) */
+        height: auto; /* Deja que la altura se ajuste al contenido */
+        align-items: center; /* Centra todo dentro del contenedor */
+        padding: 0; /* Elimina el padding si no es necesario */
+    }
+
+    .chefImagen {
+        width: 100%; /* La imagen ocupa el 100% del contenedor */
+        height: auto; /* La imagen se ajusta automáticamente en altura */
+        object-fit: cover; /* Hace que la imagen cubra todo el espacio sin distorsionarse */
+        border-radius: 15px 15px 0 0; /* Bordes redondeados en la parte superior */
+    }
+
+    .chefinfo {
+        display: block; /* Hace visible el contenedor de texto */
+        width: 100%; /* El texto ocupa todo el ancho del contenedor */
+        text-align: center; /* Centra el texto */
+        padding: 10px 0; /* Espaciado arriba y abajo */
+    }
+
+    .chefinfo h3 {
+        text-align: center;
+        font-size: 1.3em; /* Tamaño de fuente para el título */
+        margin: 10px 0; /* Márgenes alrededor del título */
+        color: #db7924; /* Color del título */
+    }
+
+    .chefinfo p {
+        display: none; /* Oculta el texto en este caso */
+    }
+}
+
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .Informacion p {
+        font-size: 2em; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+        margin: 15px 0; /* Ajusta los márgenes */
+    }
+
+    .profesionales h2 {
+        font-size: 3em; /* Ajusta el tamaño del título en pantallas más pequeñas */
+        margin: 30px 0 15px 0; /* Ajusta los márgenes */
+    }
+}
+
+/* Media query para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    .Informacion p {
+        font-size: 1.5em; /* Ajusta el tamaño del texto en pantallas muy pequeñas */
+        margin: 10px 0; /* Ajusta los márgenes */
+    }
+
+    .profesionales h2 {
+        font-size: 2.5em; /* Ajusta el tamaño del título en pantallas muy pequeñas */
+        margin: 20px 0 10px 0; /* Ajusta los márgenes */
+    }
+}
+@media screen and (max-width: 1024px) {
+    .chefs {
+        flex-direction: column; /* Cambiar a vertical en pantallas pequeñas */
+        align-items: flex-start; /* Alinea las cartas al inicio en pantallas pequeñas */
+    }
+
+    .chefcarta {
+        width: 90%; /* Aumenta el tamaño de las cartas en pantallas pequeñas */
+        height: auto; /* Ajusta la altura de las cartas */
+    }
+
+    .chefImagen {
+        width: 50%; /* La imagen ocupa el 50% del contenedor */
+        height: auto; /* Ajusta la altura de la imagen */
+    }
+
+    .chefinfo {
+        text-align: left; /* Alinea el texto a la izquierda en pantallas pequeñas */
+    }
+}
+
+
+
+
+/* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .chefs {
+        flex-direction: column; /* Cambiar a vertical en pantallas pequeñas */
+        align-items: flex-start; /* Alinea las cartas al inicio en pantallas pequeñas */
+    }
+
+    .chefcarta {
+        width: 90%; /* Aumenta el tamaño de las cartas en pantallas pequeñas */
+        height: auto; /* Ajusta la altura de las cartas */
+    }
+
+    .chefImagen {
+        width: 50%; /* La imagen ocupa el 50% del contenedor */
+        height: auto; /* Ajusta la altura de la imagen */
+    }
+
+    .chefinfo {
+        text-align: left; /* Alinea el texto a la izquierda en pantallas pequeñas */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .introContenido {
+        flex-direction: column;
+        justify-content: center; /* Centra los elementos verticalmente */
+        align-items: center;
+        text-align: center;
+        height: auto; /* Asegura que el contenedor solo ocupe el espacio necesario */
+        padding: 20px; /* Un padding moderado para separar del borde */
+        margin: 0; /* Elimina cualquier margen extra */
+    }
+
+    .intro {
+        padding: 0;
+        margin: 0; /* Elimina márgenes extra */
+        font-size: 24px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+        margin: 10px 0;
+        text-align: center; 
+    }
+
+    .intro p {
+        font-size: 18px;
+        margin: 10px 0; 
+        text-align: center;
+    }
+
+    .Buscar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Espacio entre el input y el botón */
+        margin-top: 20px; /* Espacio moderado con el título */
+    }
+
+    .Buscar input {
+        width: 80%;
+    }
+
+    .Buscar button {
+        font-size: 18px;
+        padding: 12px 16px;
+        width: auto; /* Botón ajustado a su contenido */
+    }
+}
+@media screen and (max-width: 768px) {
+    .slide-content {
+        flex-direction: column; /* Hace que la imagen y el texto se apilen */
+        align-items: center; /* Centra todo el contenido */
+        text-align: center; /* Centra el texto */
+    }
+
+    .slide-content img {
+        width: 100%; /* La imagen ocupa todo el ancho */
+        margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+    }
+
+    .text {
+        width: 100%; /* Hace que el texto ocupe todo el ancho */
+    }
+
+    .text p,
+    .text ul {
+        display: none; /* Esconde los párrafos y la lista */
+    }
+
+    .text h2 {
+        font-size: 20px; /* Ajuste de tamaño para el título */
+    }
+}

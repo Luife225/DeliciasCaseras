@@ -1,0 +1,116 @@
+html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+body{
+    background-image: url(img/fondoContacto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ps {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.atencion-intro, .faq, .formulario-contacto {
+    background-color: #e9bb66;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.atencion-intro h2, .faq h3, .formulario-contacto h3 {
+    font-size: 28px;
+    color: #3a37ee;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.atencion-intro p, .faq p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    color: #000000;
+}
+
+.faq-item {
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h4 {
+    font-size: 20px;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario-contacto input, .formulario-contacto textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+}
+
+.formulario-contacto input:focus, .formulario-contacto textarea:focus {
+    border-color: #ff5722;
+    outline: none;
+}
+
+.formulario-contacto button {
+    background-color: #ff5722;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+    background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+    .ps {
+        padding: 20px;
+    }
+
+    .atencion-intro, .faq, .formulario-contacto {
+        padding: 20px;
+    }
+
+    .faq-item {
+        margin-bottom: 10px;
+    }
+
+    .formulario-contacto form {
+        gap: 15px;
+    }
+
+    .formulario-contacto input, .formulario-contacto textarea {
+        font-size: 14px;
+    }
+
+    .formulario-contacto button {
+        font-size: 16px;
+    }
+}

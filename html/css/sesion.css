@@ -1,0 +1,281 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+body {
+    animation: slideBackground 9s infinite;
+    background-size: cover; 
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+    background-repeat: no-repeat;
+}
+
+@keyframes slideBackground {
+    0% { background-image: url('img/registro/1.png'); }
+    25% { background-image: url('img/registro/2.png'); }
+    50% { background-image: url('img/registro/3.png'); }
+    75% { background-image: url('img/registro/4.png'); }
+    100% { background-image: url('img/registro/cinco\ \(1\).png'); }
+}
+
+.registro-circulo {
+    width: 800px;
+    height: 600px;
+    background: white;
+    border-radius: 100%;
+    border: 5px solid #333;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.contenido-registro {
+    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-registro h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contenido-registro form {
+    width: 100%;
+}
+
+.contenido-registro form input {
+    display: block;
+    width: 90%; 
+    padding: 12px;
+    margin: 14px auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.contenido-registro form button {
+    padding: 20px 24px; 
+    background-color: #5938a7;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 70%; 
+}
+
+.contenido-registro form button:hover {
+    background-color: #293070;
+}
+
+.crear-cuenta {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.crear-cuenta a {
+    color: #102e8f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.crear-cuenta a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1200px) {
+    .registro-circulo {
+        width: 700px;
+        height: 700px;
+    }
+
+    .contenido-registro {
+        width: 60%;
+    }
+
+    .contenido-registro form input {
+        width: 85%;
+    }
+}
+
+@media (max-width: 992px) {
+    .registro-circulo {
+        width: 600px;
+        height: 600px;
+    }
+
+    .contenido-registro {
+        width: 70%;
+    }
+
+    .contenido-registro form input {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .registro-circulo {
+        width: 500px;
+        height: 500px;
+    }
+
+    .contenido-registro {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .contenido-registro h2 {
+        font-size: 26px;
+    }
+
+    .contenido-registro form input {
+        width: 80%; 
+        margin: 10px 0;
+    }
+
+    .contenido-registro form button {
+        width: 100%;
+    }
+
+    .crear-cuenta {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .registro-circulo {
+        width: 400px;
+        height: 400px;
+    }
+
+    .contenido-registro {
+        width: 90%;
+    }
+
+    .contenido-registro h2 {
+        font-size: 24px;
+    }
+
+    .contenido-registro form input {
+        width: 80%; 
+        margin: 10px 0;
+    }
+
+    .contenido-registro form button {
+        width: 70%;
+    }
+
+    .crear-cuenta {
+        font-size: 12px;
+    }
+}
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.3s ease; /* Animación de entrada */
+}
+
+.modal-content p {
+    margin: 0 0 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+.modal-contenido h3 {
+    margin-bottom: 15px;
+}
+
+.modal-contenido button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-contenido button:hover {
+    background-color: #45a049;
+}

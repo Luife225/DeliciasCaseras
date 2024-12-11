@@ -1,0 +1,215 @@
+html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    animation: slideBackground 9s infinite;
+    background-size: 100%;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes slideBackground {
+    0% { background-image: url('img/registro/1.png'); }
+    25% { background-image: url('img/registro/2.png'); }
+    50% { background-image: url('img/registro/3.png'); }
+    75% { background-image: url('img/registro/4.png'); }
+    100% { background-image: url('img/registro/cinco\ \(1\).png'); }
+}
+
+.registro-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registro-circulo-original {
+    position: relative;
+    width: 60%;
+    height: 600px;
+    background: white;
+    border-radius: 50%;
+    border: 5px solid #333;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contenido-registro-original {
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.contenido-registro-original h2 {
+    font-family: 'Georgia', serif;
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #6a0dad;
+}
+
+.columnas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.columna-izquierda, .columna-derecha {
+    width: 48%;
+}
+
+.contenido-registro-original input[type="text"],
+.contenido-registro-original input[type="email"],
+.contenido-registro-original input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.contenido-registro-original input[type="text"]:focus,
+.contenido-registro-original input[type="email"]:focus,
+.contenido-registro-original input[type="password"]:focus {
+    border-color: #6a0dad;
+}
+
+.boton-registro {
+    background-color: #6a0dad;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+    width: 60%;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, transform 0.3s;
+}
+
+.boton-registro:hover {
+    background-color: #3e007d;
+    transform: scale(1.05);
+}
+
+.contenido-registro-original p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.contenido-registro-original p a {
+    color: #6a0dad;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contenido-registro-original p a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .registro-circulo-original {
+        width: 90%; /* El círculo se convierte en un cuadrado más grande */
+        height: auto; /* El contenedor pierde la altura fija */
+        border-radius: 200px; /* Eliminar el borde redondeado */
+        box-shadow: none;
+         /* Eliminamos la sombra */
+    }
+
+    .contenido-registro-original h2 {
+        font-size: 28px;  /* Reducimos el tamaño del título */
+    }
+
+    .columnas {
+        flex-direction: column;  /* Apilamos los campos de formulario en columnas */
+        align-items: center;
+        
+    }
+
+    .columna-izquierda, .columna-derecha {
+        width: 100%;  /* Los campos de la izquierda y derecha ocupan el 100% */
+        margin-bottom: 15px; 
+        padding-left: -50px;
+         /* Añadimos espacio entre los campos */
+    }
+
+    .boton-registro {
+        width: 80%;  /* El botón ocupa un 80% del ancho */
+    }
+}
+
+/* Media Query para pantallas muy pequeñas (como dispositivos móviles más pequeños) */
+@media (max-width: 480px) {
+    .registro-circulo-original {
+        width: 90%;
+        height: auto;
+        
+        border-radius: 100px; /* Eliminar el círculo */
+    }
+
+    .contenido-registro-original h2 {
+        font-size: 24px;  /* Reducimos aún más el tamaño del título */
+    }
+
+    .contenido-registro-original input[type="text"],
+    .contenido-registro-original input[type="email"],
+    .contenido-registro-original input[type="password"] {
+        font-size: 14px;
+        padding-left: 10px;  /* Reducimos el tamaño de fuente de los inputs */
+    }
+
+    .boton-registro {
+        font-size: 16px;  /* Reducimos el tamaño del botón */
+        padding: 12px;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+.modal-contenido h3 {
+    margin-bottom: 15px;
+}
+
+.modal-contenido button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-contenido button:hover {
+    background-color: #45a049;
+}
+

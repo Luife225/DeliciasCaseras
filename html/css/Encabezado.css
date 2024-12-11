@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+header {
+  background-image: url(img/Encabezado.png);
+  background-repeat: no-repeat;
+  color: #fff;
+  background-size: 100%;
+  padding: 1rem;
+}
+
+.Encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+  height: 150px;
+  padding-left: 20px;
+}
+
+.titulo {
+  font-size: 36px;
+  color: aliceblue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  margin-bottom: 10px;
+  order: 1;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  order: 2;
+}
+
+nav a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: chartreuse;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 40px;
+  color: aliceblue;
+  cursor: pointer;
+  margin-right: 10px;
+  order: 1;
+}
+
+.logo {
+  order: 4;
+  margin-left: auto;
+  margin-top: -80px;
+}
+
+.logo img {
+  max-width: 180px;
+  height: auto;
+}
+
+.menu-icon.hidden {
+  display: none; /* Oculta el ícono de la hamburguesa */
+}
+
+#menu.show {
+  display: block; /* Asegúrate de que el menú sea visible cuando tiene la clase 'show' */
+}
+
+@media (max-width: 1024px) {
+  /* Título y logo */
+  .titulo,
+  .logo {
+    visibility: hidden; /* Ocultar de forma suave */
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 10vw;
+    color: aliceblue;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  /* Estilo para el menú */
+  nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    transition: left 0.3s ease;
+  }
+
+  nav.show {
+    display: block;
+    left: 0;
+  }
+
+  nav a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #444;
+  }
+
+  /* El título y logo se mostrarán cuando el menú esté oculto */
+  body.menu-open .titulo,
+  body.menu-open .logo {
+    visibility: visible;
+  }
+
+  .logo, .titulo {
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 30px;
+  }
+
+  .titulo {
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  header {
+    height: 150px;
+    min-height: 70px;
+  }
+}
+
+
+  
+
+
+
+@media (max-width: 700px) {
+  .menu-icon {
+    font-size: 11vw;
+    margin-top: -10px;
+    
+  }
+  header {
+    background: #444;
+    height: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .menu-icon {
+    font-size: 12vw;
+  }
+  
+}
+
+@media (min-width: 1025px) {
+  .menu-icon {
+    display: none; /* Aseguramos que no se vea el ícono de hamburguesa */
+  }
+
+  /* Restauramos el comportamiento del menú normal sin hamburguesa */
+  nav {
+    display: flex; /* Mostrar el menú de manera horizontal */
+    position: static; /* El menú vuelve a su posición original */
+    height: auto;
+    background-color: transparent; /* Fondo transparente */
+    padding: 0; /* Sin padding en pantallas grandes */
+    box-shadow: none; /* Sin sombra */
+  }
+}
